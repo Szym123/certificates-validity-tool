@@ -1,0 +1,13 @@
+services:
+
+  openssl:
+    image: all:1.5
+    container_name: all
+    volumes:
+      - ./data/list.txt:/root/list.txt
+      - ./data/final.html:/root/final.html
+      - ./data/cron.txt:/root/cron.txt
+      - ./main.py:/root/main.py
+      - ./server.py:/root/server.py
+    ports:
+      - 8080:8080
