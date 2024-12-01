@@ -2,15 +2,21 @@
 
 This tool checks at set intervals how much time is left until the expiry of the certificates stored in its list. And if this time is less than a set threshold, it displays this information in the web terminal.
 
-## Configuration
-
-### For Docker
+## Configuration for Docker
 
 Requirements:
 * Docker version 24.0.7
 * Docker Compose version v2.29.2-desktop.2
 
-First download the above repository, then execute the following command in it:
+Start of configuration:
+
+```bash
+git clone https://github.com/Szym123/certificates-validity-tool.git
+```
+
+```bash
+cd ./cd certificates-validity-tool/
+```
 
 ```bash
 docker build -t all:1.5 .
@@ -24,15 +30,6 @@ Followed by the this command:
 ```bash
 docker-compose up
 ```
-
-### On Host
-
-Requirements:
-* Python 3.12.3
-* OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)
-* Cron
-
-Firstly, you need to set up a rule in your cron programme that will run the main.py script at a certain frequency and then run the server.py script in the background.
 
 ## Structure
 
