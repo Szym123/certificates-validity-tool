@@ -41,8 +41,12 @@ def saveFile(Name,Final,NowDate):
         # open a file in write mode
 
         File.write("<h1>List of Worning:</h1>")
+        File.write("\n")
         # write first line
 
+        TimeStampeString="<h3>Time stamp: "+str(Config["TimeStamp"][0])+" weeks "+str(Config["TimeStamp"][1])+" days</h3>"
+        File.write(TimeStampeString)
+        
         for Item in Final:
             File.write("\n")
             File.write("<p>"+Item+"</p>")
