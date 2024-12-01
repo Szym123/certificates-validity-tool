@@ -40,7 +40,7 @@ def saveFile(Name,Final,NowDate):
         File=open(Name,"w")
         # open a file in write mode
 
-        File.write("<h1>List of Worning:</h1>")
+        File.write("<h1>List of Warning:</h1>")
         File.write("\n")
         # write first line
 
